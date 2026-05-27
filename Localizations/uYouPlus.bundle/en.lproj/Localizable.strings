@@ -33,6 +33,9 @@
 // Video player options
 "VIDEO_PLAYER_OPTIONS" = "⏯️ Video player options";
 
+"FORCE_INLINE_MUTED" = "Force Inline Playback Muted";
+"FORCE_INLINE_MUTED_DESC" = "Always mute home feed inline autoplay. Fixes double-audio when tapping into a video.";
+
 "SLIDE_TO_SEEK" = "Enable Slide to seek";
 "SLIDE_TO_SEEK_DESC" = "Bring back the Slide to seek gesture.";
 

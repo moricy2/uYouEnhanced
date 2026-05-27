@@ -341,6 +341,15 @@ static void refreshUYouAppearance() {
 }
 %end
 
+// Fix: Prevent home feed inline player audio from persisting when tapping into a video (double audio bug)
+%hook YTInlineMutedPlaybackStateControllerImpl
+- (void)forwardInceptionWillChangeWithVideoID:(id)videoID
+    retainPlayerOnNavigationToWatch:(BOOL)retain
+    watchEndpoint:(id)endpoint {
+    %orig(videoID, NO, endpoint);
+}
+%end
+
 // Temporarily disable uYou's bouncy animation cause it's buggy
 %hook SSBouncyButton
 - (void)beginShrinkAnimation {}

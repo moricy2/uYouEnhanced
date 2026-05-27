@@ -119,6 +119,7 @@ static NSString *const kHideRelatedWatchNexts = @"hideRelatedWatchNexts_enabled"
 static NSString *const kHideBuySuperThanks = @"hideBuySuperThanks_enabled";
 static NSString *const kHideSubscriptions = @"hideSubscriptions_enabled";
 static NSString *const kShortsQualityPicker = @"shortsQualityPicker_enabled";
+static NSString *const kForceInlineMuted = @"forceInlineMuted_enabled";
 // Video player buttons
 static NSString *const kRedSubscribeButton = @"redSubscribeButton_enabled";
 static NSString *const kHideButtonContainers = @"hideButtonContainers_enabled";

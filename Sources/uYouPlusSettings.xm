@@ -447,6 +447,7 @@ NSString *cacheDescription = [NSString stringWithFormat:@"%@", GetCacheSize()];
     # pragma mark - Video player options
     SECTION_HEADER(LOC(@"VIDEO_PLAYER_OPTIONS"));
 
+    SWITCH2(LOC(@"FORCE_INLINE_MUTED"), LOC(@"FORCE_INLINE_MUTED_DESC"), kForceInlineMuted);
     SWITCH2(LOC(@"ENABLE_PORTRAIT_FULLSCREEN"), LOC(@"ENABLE_PORTRAIT_FULLSCREEN_DESC"), kPortraitFullscreen);
     SWITCH2(LOC(@"FULLSCREEN_TO_THE_RIGHT"), LOC(@"FULLSCREEN_TO_THE_RIGHT_DESC"), kFullscreenToTheRight);
     SWITCH2(LOC(@"SLIDE_TO_SEEK"), LOC(@"SLIDE_TO_SEEK_DESC"), kSlideToSeek);

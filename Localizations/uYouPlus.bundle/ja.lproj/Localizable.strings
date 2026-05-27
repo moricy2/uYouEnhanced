@@ -33,6 +33,9 @@
 // Video player options
 "VIDEO_PLAYER_OPTIONS" = "⏯️ 動画コントロールのオーバーレイ設定";
 
+"FORCE_INLINE_MUTED" = "インライン再生を常にミュート";
+"FORCE_INLINE_MUTED_DESC" = "ホームフィードのインライン自動再生を常にミュートにします。動画タップ時の音声二重再生バグを修正します。";
+
 "SLIDE_TO_SEEK" = "スライドシークを有効化";
 "SLIDE_TO_SEEK_DESC" = "スライドシークジェスチャーを有効にします。";
 

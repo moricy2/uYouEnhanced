@@ -1489,8 +1489,14 @@ static NSMutableArray <YTIItemSectionRenderer *> *filteredArray(NSArray <YTIItem
 - (BOOL)enableShortsVideoQualityPicker { return YES; }
 - (BOOL)iosEnableImmersiveLivePlayerVideoQuality { return YES; }
 - (BOOL)iosEnableShortsPlayerVideoQuality { return YES; }
-- (BOOL)iosEnableShortsPlayerVideoQualityRestartVideo { return YES; }
 - (BOOL)iosEnableSimplerTitleInShortsVideoQualityPicker { return YES; }
+%end
+%end
+
+// Force Inline Muted - always mute home feed inline autoplay
+%group gForceInlineMuted
+%hook YTHotConfig
+- (BOOL)enableInlineMuted { return YES; }
 %end
 %end
 
@@ -1512,7 +1518,6 @@ static NSMutableArray <YTIItemSectionRenderer *> *filteredArray(NSArray <YTIItem
 
 %hook YTColdConfig
 - (BOOL)iosEnableVideoPlayerScrubber { return YES; }
-- (BOOL)mobileShortsTablnlinedExpandWatchOnDismiss { return YES; }
 %end
 
 %hook YTHotConfig
@@ -2026,6 +2031,9 @@ static NSMutableArray <YTIItemSectionRenderer *> *filteredArray(NSArray <YTIItem
     }
     if (IS_ENABLED(kShortsQualityPicker)) {
         %init(gShortsQualityPicker);
+    }
+    if (IS_ENABLED(kForceInlineMuted)) {
+        %init(gForceInlineMuted);
     }
     if (IS_ENABLED(kFixCasting)) {
         %init(gFixCasting);
